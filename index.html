@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/cssforthai.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+  </head>
+
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html"  >Home</a>
+    <a href="Contact.html">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <!-- <div class="header">
+          <h2>Menu</h2>
+        </div> -->
+        <div class="row">
+          <div class="column">
+            <h3>Camps</h3>
+            <a href="Phuket.html">Camp Phuket</a>
+            <a href="Elephant.html">Camp Elephant</a>
+            <a href="Mai.html">Camp Chiang Mai</a>
+          </div>
+          <div class="column">
+            <h3>Travel</h3>
+            <a href="Flights.html">Flights</a>
+            <a href="Accomodation.html">Accomodation</a>
+            <a href="Cost.html">Trip Costs</a>
+          </div>
+          <div class="column">
+            <h3>Help and FAQs</h3>
+            <a href="PandG.html">Are you a parent/guardian?</a>
+            <a href="FAQs.html">FAQs</a>
+            <a href="Reviews.html">Reviews</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <img src="placeholder.jpg" class="center" height="13%" width="13%">
+
+<div class="content">
+
+  <div class="wrapper">
+    <div class="one">
+      <button class="accordion">What employers think of this trip</button>
+      <div class="panel">
+        <p>Put in what employers think to make it look great to interested customers</p>
+      </div>
+
+      <button class="accordion">What skills does this trip improve?</button>
+      <div class="panel">
+        <p>Going on a trip with strangers sounds intimidating, but you can build lots of skills varying from communication to relationship building skills which are invaluable in working today. </p>
+      </div>
+
+      <button class="accordion">Other benefits of going on this trip</button>
+      <div class="panel">
+        <p>You can make life long friends and memories, get that insta worthy pic with the elephants or with your new friends.</p>
+      </div>
+
+    </div>
+    <div class="two"> Being at Camp Thailand allows you to build several skills and allows you become more employable and more appealing to employers. With working with elephants and teaching in the local schools while relaxing on the beaches and touring the beautiful cities.</div>
+    <div class="three">HI there, Im here to grab the readers attention and to  be used to interest the readers
+    in giving their email address for a chance to win a prize</div>
+  </div>
+
+
+
+  <section>
+
+    <p class="orderyellow">
+      Here we have the packages, deals and what each package will include such as
+      elephant conservation and going into local schools to teach kids english etc.
+      Deals having the before and after price displayed or payments such as weekly/monthly
+      installments to make it more accessible to families with a 'stricter' budget
+      Read more (insert hyperlink)
+    </p>
+
+  </section>
+
+  <section>
+
+  <p class="orderblue">
+    Still unsure? look at these reviews and blogs from students who went and employers
+    who think it looks great on your CV. Got any questions? Look at our guide/ FAQs
+  </p>
+  </section>
+
+  <section >
+  <p class="orderyellow" >
+     Check out our other camps
+  </p>
+  </section>
+
+   <footer class="order">
+    copyrights go here or whatever else goes here too
+  </footer>
+
+
+</div>
+
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementByClassName("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+
+
+<script>
+
+
+
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+
+
+
+</body>
+
+
+
+</html>

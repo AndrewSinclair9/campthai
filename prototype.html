@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/proto.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+
+<body>
+
+  <div class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <!-- <div class="header">
+          <h2>Menu</h2>
+        </div> -->
+        <div class="row">
+          <div class="column">
+            <h3>Camps</h3>
+            <a href="#">Different</a>
+            <a href="#">Camps</a>
+            <a href="#">Here</a>
+          </div>
+          <div class="column">
+            <h3>Travel</h3>
+            <a href="#">Travel</a>
+            <a href="#">And Accomodation</a>
+            <a href="#">Here</a>
+          </div>
+          <div class="column">
+            <h3>Guardians</h3>
+            <a href="#">Parents</a>
+            <a href="#">FAQs</a>
+            <a href="#">Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span class ="deal"></span>
+
+
+
+
+  <h2>Accordion with symbols</h2>
+  <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+  <button class="accordion">Section 1</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion">Section 2</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion">Section 3</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
+
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementByClassName("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+
+</body>
+
+
+
+</html>
