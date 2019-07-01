@@ -46,8 +46,10 @@
   </div>
 
 
+<div class="parallax1">
+<img src="camp.jpg" class="center" height=13% width=13%>
+</div>
 
-    <img src="placeholder.jpg" class="center" height="13%" width="13%">
 
 <div class="content">
 
@@ -70,8 +72,17 @@
 
     </div>
     <div class="two"> Being at Camp Thailand allows you to build several skills and allows you become more employable and more appealing to employers. With working with elephants and teaching in the local schools while relaxing on the beaches and touring the beautiful cities.</div>
-    <div class="three">HI there, Im here to grab the readers attention and to  be used to interest the readers
-    in giving their email address for a chance to win a prize</div>
+    <div class="three">
+      <form action="/action_page.php">
+      First name:
+      <input type="text" name="FirstName" value="Enter here"><br>
+      Last name:
+      <input type="text" name="LastName" value="Enter here"><br>
+      Email Address:
+      <input type="text" name="EmailAddress" value="Enter here"><br>
+      <input type="submit" value="Submit">
+    </form>
+</div>
   </div>
 
 
@@ -83,7 +94,7 @@
       elephant conservation and going into local schools to teach kids english etc.
       Deals having the before and after price displayed or payments such as weekly/monthly
       installments to make it more accessible to families with a 'stricter' budget
-      Read more (insert hyperlink)
+      <a href="http://www.google.co.uk">Read more</a>
     </p>
 
   </section>
@@ -92,18 +103,53 @@
 
   <p class="orderblue">
     Still unsure? look at these reviews and blogs from students who went and employers
-    who think it looks great on your CV. Got any questions? Look at our guide/ FAQs
+    who think it looks great on your CV. Got any questions? Look at our <a href="http://www.google.co.uk">Guides/ FAQs</a>
   </p>
   </section>
 
   <section >
   <p class="orderyellow" >
-     Check out our other camps
+        <h2>Check out our other camps</h2>
+
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+     <div class="numbertext">1 / 3</div>
+     <img src="camp.jpg" style="width:10%">
+     <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+     <div class="numbertext">2 / 3</div>
+     <img src="placeholder.jpg" style="width:10%">
+     <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+     <div class="numbertext">3 / 3</div>
+     <img src="home.jpg" style="width:10%">
+     <div class="text">Caption Three</div>
+    </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+     <span class="dot"></span>
+     <span class="dot"></span>
+     <span class="dot"></span>
+    </div>
   </p>
   </section>
 
    <footer class="order">
-    copyrights go here or whatever else goes here too
+     <img src="copyright.png" class="center" height=80vw width=300vw>
+    <p>
+     © Invasion Camp Group, Registered in England and Wales No. 07373495.
+     All rights reserved. Invasion is a registered trademark – number UK00003239996.
+     Invasion Camp Group Ltd is a member of ABTA (membership no. Y4841).
+     Legal – Privacy Policy.
+   </p>
   </footer>
 
 
@@ -143,28 +189,25 @@
 
 
 <script>
+var slideIndex = 0;
+showSlides();
 
-
-
-  var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
   </script>
 
 
